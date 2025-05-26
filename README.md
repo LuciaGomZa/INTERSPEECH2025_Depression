@@ -20,7 +20,7 @@ Automated depression detection is gaining attention due to its potential to impr
   * *get_text_embedding*: Extracts the [CLS] token embedding from a text string.
 * **context_windows.py**: This code provides functionality to process embeddings by slicing them into overlapping context windows and saving the processed data for further analysis. It includes two functions for handling the two datasets (DEPTALK and DAIC) and a utility function for creating context windows, defined below:
   * *create_context_windows*: slices a given array into overlapping windows of a specified size (window_size) with a defined step (hop_length). Particularly, it creates windows of W consecutive turns in a dialogue (see the figure above).
-* **modeling.py**: This script implements a machine learning pipeline for training and evaluating models on multimodal data (speech, text, or both) to predict depression (classification based on binarizing PHQ scores). It includes two functions for handling the two datasets (DEPTALK and DAIC) and uses embeddings as input features. The pipeline includes data preparation, model training, evaluation, and experimentation with hyperparameters.
+* **modeling.py**: This script implements a deep learning pipeline for training and evaluating GRU models on multimodal data (speech, text, or both) to predict depression (classification based on binarizing PHQ scores). It includes functions for handling the two datasets (DEPTALK and DAIC) and uses embeddings as input features. The pipeline includes data preparation, model training, evaluation, and experimentation with hyperparameters.
 
 <!-- * requirements.txt: required packages to be installed. -->
 
