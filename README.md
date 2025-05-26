@@ -15,9 +15,11 @@ Automated depression detection is gaining attention due to its potential to impr
 
 
 ## Files and folders
-* data: description of the datasets used, and instructions on how to obtain them.
-* codes: folder with the following...
-  * 1_Automatic Speech Recognition (ASR): ...
+* **extract_embeddings.py**: This script is designed to extract embeddings (numerical representations) from speech and text data using pre-trained models from the HuggingFace library. It includes specific functions for handling the two datasets (DEPTALK and DAIC), creating embeddings for each participant utterance (for the interviews in DAIC+, and for each conversation in DEPTALK). The two main functions are:
+  * get_speech_embedding: Extracts hidden states from the last hidden layer (or a specific layer X, if indicated as '_LX' in the model name) and then computes the mean along the time dimension. 
+  * get_text_embedding: Extracts the [CLS] token embedding from a text string.
+* **context_windows.py**: This code provides functionality to process embeddings by slicing them into overlapping context windows and saving the processed data for further analysis. It includes two functions for handling the two datasets (DEPTALK and DAIC) and a utility function for creating context windows, defined below:
+  * create_context_windows: slices a given array into overlapping windows of a specified size (window_size) with a defined step (hop_length).
 <!-- * requirements.txt: required packages to be installed. -->
 
 ## Citation
