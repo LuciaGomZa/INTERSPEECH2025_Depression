@@ -26,7 +26,7 @@ Automated depression detection is gaining attention due to its potential to impr
 
 ## Data
 The paper applied depression detection models to two datasets:
-* **DAIC+**: an extension of the well-known DAIC corpus, featuring 459 semi-structured clinical interviews conducted primarily by a virtual agent (in English). This work also used two DAIC sets publicily available: DAIC-WOZ and E-DAIC. To access the data, see https://dcapswoz.ict.usc.edu/. The organization of the DAIC+ data expected in the code is as follows:
+* ➡️ **DAIC+**: an extension of the well-known DAIC corpus, featuring 459 semi-structured clinical interviews conducted primarily by a virtual agent (in English). This project also incorporates two publicly available subsets: DAIC-WOZ and E-DAIC. You can request access to the data at https://dcapswoz.ict.usc.edu/. The code in this repository expects the DAIC+ data to be organized in the following directory structure:
 ```
 <root_folder>/
 ├── Audios/
@@ -38,7 +38,7 @@ The paper applied depression detection models to two datasets:
 │   └── ...
 ```
 
-* **DEPTALK**: a dataset capturing casual conversations between 101 participants and fully automated virtual humans expressing various emotions (in Spanish). This dataset is private. The organization of the data expected in the code is as follows:
+* ➡️ **DEPTALK**: a dataset capturing casual conversations between 101 participants and fully automated virtual humans expressing various emotions (in Spanish). This dataset is private and not publicly available. The code in this repository expects the DEPTALK data to be organized in the following directory structure:
 ```
 <root_folder>/
 ├── <user_id>_Conversations/
