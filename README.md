@@ -33,8 +33,8 @@ The paper applied depression detection models to two datasets:
 │   ├── <user_id>_AUDIO.wav
 │   └── ...
 ├── Transcriptions/
-│   ├── <user_id>_P.tsv
-│   ├── <user_id>_G_ASR.csv (optional)
+│   ├── <user_id>_P.tsv (optional)
+│   ├── <user_id>_G_ASR.csv
 │   └── ...
 ```
 
