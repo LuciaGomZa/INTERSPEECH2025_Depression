@@ -174,7 +174,7 @@ def extract_text_embeddings_deptalk(
             np.save(out_file, embeddings_text)
             logging.info(f"Saved text embeddings for {avatar_folder.name} as {out_file}")
 
-# For delays information in DAIC, see: 
+# For correcting timestamp information in DAIC, see: 
 # M. Hu, L. Liu, X. Wang, Y. Tang, J. Yang, and N. An, “Parallel multiscale bridge fusion network for audio–visual automatic depression assessment,” IEEE Transactions on Computational Social Systems, vol. 11, no. 5, pp. 6830–6842, 2024
 # DEFAULT_DELAYS_DAIC = {'318': 34.3199, '321': 3.8379, '341': 6.1892, '362': 16.8582}
 DEFAULT_DELAYS_DAIC = {'318': 33.8199, '321': 3.3379, '341': 5.6892, '362': 16.3582, '300': 35.7}
