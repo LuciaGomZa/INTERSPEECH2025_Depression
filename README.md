@@ -16,13 +16,40 @@ Automated depression detection is gaining attention due to its potential to impr
 
 ## Files and folders
 * **extract_embeddings.py**: This script is designed to extract embeddings (numerical representations) from speech and text data using pre-trained models from the HuggingFace library. It includes specific functions for handling the two datasets (DEPTALK and DAIC), creating embeddings for each participant utterance (for each interviews in DAIC+, and for each of the six conversations in DEPTALK). The two main functions are:
-  * *get_speech_embedding*: Extracts hidden states from the last hidden layer (or a specific layer X, if indicated as '_LX' in the model name) and then computes the mean along the time dimension. 
+  * *get_speech_embedding*: Extracts hidden states from the final hidden layer of the model, or from a specific layer X if specified in the model name (e.g., '_LX'). It then averages these hidden states over the time dimension to produce a speech embedding of fixed dimensions.
   * *get_text_embedding*: Extracts the [CLS] token embedding from a text string.
 * **context_windows.py**: This code provides functionality to process embeddings by slicing them into overlapping context windows and saving the processed data for further analysis. It includes two functions for handling the two datasets (DEPTALK and DAIC) and a utility function for creating context windows, defined below:
   * *create_context_windows*: slices a given array into overlapping windows of a specified size (window_size) with a defined step (hop_length). Particularly, it creates windows of W consecutive turns in a dialogue (see the figure above).
 * **modeling.py**: This script implements a deep learning pipeline for training and evaluating GRU models on multimodal data (speech, text, or both) to predict depression (classification based on binarizing PHQ scores). It includes functions for handling the two datasets (DEPTALK and DAIC) and uses embeddings as input features. The pipeline includes data preparation, model training, evaluation, and experimentation with hyperparameters.
 
 <!-- * requirements.txt: required packages to be installed. -->
+
+## Data
+The paper applied depression detection models to two datasets:
+* **DAIC+**: an extension of the well-known DAIC corpus, featuring 459 semi-structured clinical interviews conducted primarily by a virtual agent (in English). This work also used two DAIC sets publicily available: DAIC-WOZ and E-DAIC. To access the data, see https://dcapswoz.ict.usc.edu/. The organization of the DAIC+ data expected in the code is as follows:
+```
+<root_folder>/
+├── Audios/
+│   ├── <user_id>_AUDIO.wav
+│   └── ...
+├── Transcriptions/
+│   ├── <user_id>_P.tsv
+│   ├── <user_id>_G_ASR.csv (optional)
+│   └── ...
+```
+
+* **DEPTALK**: a dataset capturing casual conversations between 101 participants and fully automated virtual humans expressing various emotions (in Spanish). This dataset is private. The organization of the data expected in the code is as follows:
+```
+<root_folder>/
+├── <user_id>_Conversations/
+│   ├── <user_id>_<session_id>/
+│   │   ├── Audios/
+│   │   │   ├── Subject_<user_id>_T=<order_id>.wav
+│   │   │   └── ...
+│   │   └── Conv_<session_id>.csv
+│   └── ... 
+└── ...
+```
 
 ## Citation
 If you find this work helpful, please cite our work as:
