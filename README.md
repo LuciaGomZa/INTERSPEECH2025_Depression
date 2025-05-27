@@ -42,11 +42,11 @@ The paper applied depression detection models to two datasets:
 ```
 <root_folder>/
 ├── <user_id>_Conversations/
-│   ├── <user_id>_<session_id>/
+│   ├── <user_id>_<avatar_id>/
 │   │   ├── Audios/
 │   │   │   ├── Subject_<user_id>_T=<order_id>.wav
 │   │   │   └── ...
-│   │   └── Conv_<session_id>.csv
+│   │   └── Conv_<avatar_id>.csv
 │   └── ... 
 └── ...
 ```
