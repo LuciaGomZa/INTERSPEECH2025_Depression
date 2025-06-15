@@ -38,7 +38,7 @@ The paper applied depression detection models to two datasets:
 │   └── ...
 ```
 
-* ➡️ **DEPTALK**: a dataset capturing casual conversations between 101 participants and fully automated virtual humans expressing various emotions (in Spanish). This dataset is private and not publicly available. The code in this repository expects the DEPTALK data to be organized in the following directory structure:
+* ➡️ **DEPTALK**: a dataset capturing casual conversations between 101 participants and fully automated virtual humans expressing various emotions (in Spanish). This dataset is private and not publicly available. The code in this repository expects the DEPTALK data to be organized in the following directory structure: 
 ```
 <root_folder>/
 ├── <user_id>_Conversations/
